@@ -1,0 +1,38 @@
+<h2>Dashboard</h2>
+
+<div class="row">
+    <div class="col s3">
+      <div class="row">A fazer</div>
+      <div class="row">
+        <ul>
+          <!-- {{#each model.todo as |demand|}}
+            <li>
+              {{demand.title}}
+            </li>
+          {{/each}} -->
+        </ul>
+        {{todo}}
+      </div>
+    </div>
+    <div class="col s3">
+      <div class="row">Em desenvolvimento</div>
+    </div>
+    <div class="col s3">
+      <div class="row">A fazerEm teste</div>
+    </div>
+    <div class="col s3">
+      <div class="row">Em homologação</div>
+    </div>
+  </div>
+
+
+<!-- {{name}}
+<div class="row">
+  {{#each boards as |board|}}
+    {{board-kanban board=board}}
+  {{/each}}
+</div> -->
+
+
+
+<a href="#" {{action 'logout'}}>Logout</a>
