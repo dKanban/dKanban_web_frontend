@@ -22,10 +22,20 @@ module.exports = function(environment) {
     }
   };
 
+
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'dashboard',
     routeIfAlreadyAuthenticated: 'dashboard',
     authorizer: 'simple-auth-authorizer:devise'
+  }
+
+  ENV['simple-auth-devise'] = {
+    tokenPropertyName: 'auth_token',
+    identificationAttributeName: 'email',
+    tokenAttributeName: 'auth_token',
+    passwordField: 'password',
+    authorizationHeaderName: 'Authorization',
+    headers: {}
   }
 
 

@@ -7,7 +7,9 @@ export default Ember.Component.extend({
   actions: {
     authenticate: function(){
       let {identification, password} = this.getProperties('identification', 'password');
-      return this.get('session').authenticate('authenticator:devise', identification, password).catch((reason) =>{
+      let authenticator = 'authenticator:devise';
+
+      return this.get('session').authenticate(authenticator, identification, password).catch((reason) =>{
         this.set('errorMessage', reason);
       });
     }
