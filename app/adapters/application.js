@@ -6,8 +6,7 @@ export default DS.RESTAdapter.extend(AuthenticatedRouteMixin,{
   headers: Ember.computed('session.data.authenticated.auth_token', function() {
     var authentication = this.get('session.data.authenticated');
     return{
-      "Authorization": authentication.auth_token,
-      "ANOTHER_HEADER": "Some header value"
+      "Authorization": authentication.auth_token
     };
   })
 });
