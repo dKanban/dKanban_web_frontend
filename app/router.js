@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('dashboard');
   this.route('demands');
+  this.route('detail',{ path: '/demand/:demand_id' });
 });
 
 export default Router;

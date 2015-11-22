@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://localhost:3000/api/v1',
+  host: 'http://dkanban.herokuapp.com/api/v1',
   // beforeSend: function(xhr){
   //    xhr.setRequestHeader('Authorization','mskkisLAKB6Sq-TvbXT-');
   // }

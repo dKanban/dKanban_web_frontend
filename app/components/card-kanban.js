@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   }.property('card'),
 
   click: function() {
-    alert('eaee');
+    this.sendAction('action', this.get('card'));
   }
 
 });

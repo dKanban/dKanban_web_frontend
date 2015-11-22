@@ -1,10 +1,8 @@
 <h2>Dashboard</h2>
 
 <div class="row">
-  {{board-kanban board="A fazer" cards=todo}}
-  {{board-kanban board="Desenvolvimendo" cards=development}}
-  {{board-kanban board="Testando" cards=testing}}
-  {{board-kanban board="Homologando" cards=homologation}}
+  {{board-kanban board="A fazer" cards=todo action="detailCard"}}
+  {{board-kanban board="Desenvolvimendo" cards=development action="detailCard"}}
+  {{board-kanban board="Testando" cards=testing action="detailCard"}}
+  {{board-kanban board="Homologando" cards=homologation action="detailCard"}}
 </div>
-
-<a href="#" {{action 'logout'}}>Logout</a>
