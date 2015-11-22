@@ -6,6 +6,4 @@ export default Devise.extend({
   tokenPropertyName: 'auth_token',
   passwordField: 'password',
   identificationAttributeName: 'email',
-  authorizationHeaderName: 'Authorization',
-  headers: {}
 });

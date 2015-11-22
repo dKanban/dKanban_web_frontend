@@ -22,22 +22,19 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['simple-auth'] = {
+    crossOriginWhitelist: ['*'],
+    authorizer: 'simple-auth-authorizer:devise',
+    tokenAttributeName: 'auth_token',
+  };
 
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'dashboard',
     routeIfAlreadyAuthenticated: 'dashboard',
-    authorizer: 'simple-auth-authorizer:devise'
-  }
-
-  ENV['simple-auth-devise'] = {
-    tokenPropertyName: 'auth_token',
-    identificationAttributeName: 'email',
+    authorizer: 'simple-auth-authorizer:devise',
     tokenAttributeName: 'auth_token',
-    passwordField: 'password',
-    authorizationHeaderName: 'Authorization',
-    headers: {}
+    crossOriginWhitelist: ['*']
   }
-
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

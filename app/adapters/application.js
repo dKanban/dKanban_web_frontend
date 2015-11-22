@@ -1,13 +1,12 @@
 import DS from 'ember-data';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
-export default DS.RESTAdapter.extend({
+export default DS.RESTAdapter.extend(AuthenticatedRouteMixin,{
   host: 'http://localhost:3000/api/v1',
-  // beforeSend: function(xhr){
-  //    xhr.setRequestHeader('Authorization','mskkisLAKB6Sq-TvbXT-');
-  // }
-  headers: Ember.computed('session.authToken', function() {
-    return {
-      "Authorization": 'nHGwrerymCx4zPpeVC4q',
+  headers: Ember.computed('session.data.authenticated.auth_token', function() {
+    var authentication = this.get('session.data.authenticated');
+    return{
+      "Authorization": authentication.auth_token,
       "ANOTHER_HEADER": "Some header value"
     };
   })

@@ -3,6 +3,7 @@ const {service} = Ember.inject;
 
 export default Ember.Component.extend({
   session: service('session'),
+  authenticator: 'simple-auth-authenticator:devise',
 
   actions: {
     authenticate: function(){

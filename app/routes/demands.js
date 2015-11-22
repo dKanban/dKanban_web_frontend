@@ -5,8 +5,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   actions: {
     createDemand: function(){
       self = this;
+      
       var priority = this.getPriority(this.controller.get('selectedPriority'))
-      console.log(priority);
       var demand = this.store.createRecord('demand', {
         title: this.controller.get('title'),
         description: this.controller.get('description'),
