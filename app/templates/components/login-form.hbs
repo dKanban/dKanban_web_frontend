@@ -1,12 +1,22 @@
-<form {{action "authenticate" on="submit"}}>
-  <label for="identification">Login</label>
-  {{input value=identification placeholder="Enter Login"}}
-
-  <label for="password">Password</label>
-  {{input value=password type="password" placeholder="Enter Password"}}
-
-  <button type="submit">Login</button>
-</form>
+<div class="row">
+    <form class="col s12" {{action "authenticate" on="submit"}}>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input value=identification placeholder="Email" id="first_name" class="validate"}}
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          {{input value=password type="password" id="password" placeholder="Enter Password" class="validate"}}
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons figerprint">entrar</i>
+      </button>
+    </form>
+</div>
 
 {{#if errorMessage}}
   {{errorMessage}}

@@ -1,4 +1,13 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<nav>
+  <div class="nav-wrapper">
+    {{#link-to 'dashboard'}}dKanban{{/link-to}}
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>{{#link-to 'demands'}}Cadastrar Demanda{{/link-to}}</li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="#" {{action 'logout'}}>Logout</a></li>
+    </ul>
+  </div>
+</nav>
 
 {{outlet}}
 

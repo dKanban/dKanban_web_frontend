@@ -1,0 +1,21 @@
+<div class="row">
+   <form class="col s12" {{action "createDemand" on="submit"}}>
+     <div class="row">
+       <div class="input-field col s6">
+         {{input value=title id="title" placeholder="" class="validate"}}
+         <label for="title">Nome</label>
+       </div>
+     </div>
+     <div class="row">
+        <div class="input-field col s12">
+          {{textarea value=description id="textarea1" placeholder="" class="materialize-textarea"}}
+          <label for="textarea1">Descrição</label>
+        </div>
+      </div>
+      {{view "select" content=priorities value=selectedPriority class="browser-default"}}
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">
+        <i class="material-icons figerprint">entrar</i>
+      </button>
+   </form>
+ </div>

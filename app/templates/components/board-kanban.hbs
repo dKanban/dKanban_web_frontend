@@ -1,1 +1,5 @@
-{{board}}
+<h4>{{board}}</h4>
+<div class="divider"></div>
+{{#each cards as |card|}}
+  {{card-kanban card=card}}
+{{/each}}

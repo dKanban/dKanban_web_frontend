@@ -24,7 +24,8 @@ module.exports = function(environment) {
 
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'dashboard',
-    routeIfAlreadyAuthenticated: 'dashboard'
+    routeIfAlreadyAuthenticated: 'dashboard',
+    authorizer: 'simple-auth-authorizer:devise'
   }
 
 
