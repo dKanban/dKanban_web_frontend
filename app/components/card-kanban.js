@@ -1,7 +1,14 @@
 import Ember from 'ember';
+var { get } = Ember;
 
 export default Ember.Component.extend({
-  classNames: 'row',
+  classNames: ['row','draggableItem'],
+  attributeBindings : [ 'draggable' ],
+  draggable         : 'true',
+  //
+  dragStart(event) {
+      return event.dataTransfer.setData('text/data', get(this, 'card.id'));
+    },
 
   priority: function(){
     var currentPriority = this.get('card.priority')
@@ -17,6 +24,13 @@ export default Ember.Component.extend({
       return "Baixa";
     }
   }.property(),
+
+//TODO FIND ACTION INTO A CONTROLLEr
+  // developer: function(){
+  //   var store = this.get('parentView.targetObject.store')
+  //   return store.find('user',this.get('card.developer_owner_id'));
+  // }.property('model'),
+
 
   click: function() {
     this.sendAction('action', this.get('card'));
