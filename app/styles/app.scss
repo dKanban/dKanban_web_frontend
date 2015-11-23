@@ -1,2 +1,22 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+.fix-select{
+  margin-top: 30px;
+}
+
+.Urgente{
+  color: #FF530D !important;
+}
+
+.Alta{
+  color: #E8910C !important;
+}
+
+.Média{
+  color: #E9FF0D !important;
+}
+
+.Baixa{
+  color: #E9FF0D !important;
+}

@@ -2,16 +2,25 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   classNames: 'row',
-  store: Ember.inject.service(),
 
-  developer: function(){
-    // var user = this.get('store').find('user',1);
-    // console.log(user.length);
-    return '1000';
-  }.property('card'),
+  priority: function(){
+    var currentPriority = this.get('card.priority')
+    if(currentPriority === "0"){
+      return "Urgente";
+    }else if(currentPriority === "1"){
+      return "Alta";
+    }
+    else if(currentPriority === "2"){
+      return "Média";
+    }
+    else if(currentPriority === "3"){
+      return "Baixa";
+    }
+  }.property(),
 
   click: function() {
     this.sendAction('action', this.get('card'));
-  }
+  },
+
 
 });

@@ -5,10 +5,12 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   model: function(){
     return this.get('store').findAll('demand');
   },
-
   actions: {
     detailCard: function(params){
       this.transitionTo('detail',params);
+    },
+    refreshModel: function(){
+      this.refresh();
     }
   }
 });

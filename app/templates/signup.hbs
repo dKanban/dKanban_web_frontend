@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row fix-select">
+  <h1 class="header center-on-small-only">Cadastre-se</h1>
+   <form class="col s12" {{action "createUser" on="submit"}}>
+     <div class="row">
+       <div class="input-field col s6">
+         {{input value=full_name id="name" placeholder="" class="validate"}}
+         <label for="name">Nome Completo</label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6">
+         {{input value=email id="email" placeholder="" class="validate"}}
+         <label for="email">Email</label>
+       </div>
+     </div>
+     <div class="row">
+        <div class="input-field col s12">
+          {{input value=password id="password" type="password" class="validate"}}
+          <label for="password" class="">Senha</label>
+        </div>
+      </div>
+
+      <button class="btn waves-effect waves-light fix-select" type="submit" name="action">
+        <i class="material-icons figerprint">Cadastrar</i>
+      </button>
+   </form>
+ </div>
+</div>

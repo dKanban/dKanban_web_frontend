@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('demands');
   this.route('detail',{ path: '/demand/:demand_id' });
+  this.route('signup');
 });
 
 export default Router;
