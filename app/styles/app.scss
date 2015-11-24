@@ -10,7 +10,7 @@
 }
 
 
-$default-margin : 20px;
+$default-margin : 5px;
 $gray-light     : #e1e1e1;
 $gray-medium    : #aaa;
 $green          : #2ecc71;
@@ -22,9 +22,9 @@ $black          : #111;
    border: 3px dashed $gray-medium;
    padding: $default-margin / 2;
    width: 100%;
-   min-height: $default-margin * 2.5;
+   min-height: $default-margin *2.5;
    color: $gray-medium;
-   margin-bottom: $default-margin / 2;
+   margin-bottom: $default-margin / 4;
    &.activated {
      border-color: $green;
    }
@@ -37,9 +37,9 @@ $black          : #111;
    display: inline-block;
    min-width: $default-margin;
    min-height: $default-margin;
-   background: $gray-light;
-   padding: $default-margin / 4 $default-margin / 2;
-   margin: $default-margin / 4;
+   background: $white;
+   padding: $default-margin/10 $default-margin;
+   margin: $default-margin ;
    -moz-user-select: none;
    -khtml-user-drag: element;
    cursor: move;

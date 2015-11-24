@@ -10,11 +10,13 @@ export default Ember.Component.extend(ParseUtil,{
 
   dragLeave(event) {
     event.preventDefault();
+
     set(this, 'dragClass', 'deactivated');
   },
 
   dragOver(event) {
     event.preventDefault();
+//TODO: alterar cor da borda para vermelho se não for permitido
     set(this, 'dragClass', 'activated');
   },
 
