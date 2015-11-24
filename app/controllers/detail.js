@@ -26,13 +26,7 @@ export default Ember.Controller.extend(ParseUtil,{
     if(text === "0"){
       return "Urgente";
     }else if(text === "1"){
-      return "Alta";
-    }
-    else if(text === "2"){
-      return "Média";
-    }
-    else if(text === "3"){
-      return "Baixa";
+      return "Normal";
     }
   }.property('model'),
 

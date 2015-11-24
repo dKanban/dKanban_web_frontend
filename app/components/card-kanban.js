@@ -20,13 +20,7 @@ export default Ember.Component.extend({
     if(currentPriority === "0"){
       return "Urgente";
     }else if(currentPriority === "1"){
-      return "Alta";
-    }
-    else if(currentPriority === "2"){
-      return "Média";
-    }
-    else if(currentPriority === "3"){
-      return "Baixa";
+      return "Normal";
     }
   }.property(),
 
@@ -35,12 +29,6 @@ export default Ember.Component.extend({
     if(currentPriority === "0"){
       return " red accent-3";
     }else if(currentPriority === "1"){
-      return " red lighten-3";
-    }
-    else if(currentPriority === "2"){
-      return "lime darken-3";
-    }
-    else if(currentPriority === "3"){
       return "teal darken-2";
     }
   }.property(),

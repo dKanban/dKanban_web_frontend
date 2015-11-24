@@ -5,7 +5,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   actions: {
     createDemand: function(){
       self = this;
-      
+
       var priority = this.getPriority(this.controller.get('selectedPriority'))
       var demand = this.store.createRecord('demand', {
         title: this.controller.get('title'),
@@ -24,14 +24,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   getPriority: function(text){
     if(text === "Urgente"){
       return 0;
-    }else if(text === "Alta"){
+    }else if(text === "Normal"){
       return 1;
-    }
-    else if(text === "Média"){
-      return 2;
-    }
-    else if(text === "Baixa"){
-      return 3;
     }
   }
 });
