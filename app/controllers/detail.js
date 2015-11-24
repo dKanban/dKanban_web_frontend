@@ -1,6 +1,6 @@
 import Ember from 'ember';
-
-export default Ember.Controller.extend({
+import ParseUtil from '../mixins/parse-util'
+export default Ember.Controller.extend(ParseUtil,{
 
   selectedStatus: '',
   status: function(){
@@ -44,15 +44,5 @@ export default Ember.Controller.extend({
     // this.transitionToRoute('dashboard');
   }.observes('selectedStatus'),
 
-  getStatus: function(status){
-    if(status === "Testando"){
-      return "2";
-    }else if(status === "Desenvolvendo"){
-      return "1";
-    }else if(status === "Homologando"){
-      return "3"
-    }else {
-      return "4"
-    }
-  }
+
 });

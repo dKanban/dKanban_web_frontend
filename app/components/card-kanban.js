@@ -2,12 +2,17 @@ import Ember from 'ember';
 var { get } = Ember;
 
 export default Ember.Component.extend({
-  classNames: ['row','draggableItem'],
-  attributeBindings : [ 'draggable' ],
-  draggable         : 'true',
+  classNames: ['row'],
   //
   dragStart(event) {
-      return event.dataTransfer.setData('text/data', get(this, 'card.id'));
+
+    var result = {
+      'cardStatus' : get(this, 'card.status'),
+      'cardId' : get(this,'card.id'),
+      'developer' : get(this, 'developer_owner_id')
+    }
+    var card = JSON.stringify(result)
+    return event.dataTransfer.setData('text/data', card );
     },
 
   priority: function(){

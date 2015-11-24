@@ -4,11 +4,10 @@ var { get } = Ember;
 
 export default Ember.Route.extend(AuthenticatedRouteMixin,{
   model: function(id){
-    var post = this.get('store').query('demand', id);
-    return post;
+    var demand = this.get('store').query('demand', id);
+    return demand;
   },
-
-
+  
   actions: {
     detailCard: function(params){
       this.transitionTo('detail',params);
@@ -16,13 +15,15 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
     refreshModel: function(){
       this.refresh();
     },
-    changeCard(cardId) {
+    changeCard(card) {
       var self = this;
       var saveSucess = function(demand) {
         self.refresh();
       };
-      this.store.find('demand', cardId).then(function(demand){
-        demand.set('status', "2");
+      console.log('o card é ' + card);
+      card = JSON.parse(card)
+      this.store.find('demand', card.cardId).then(function(demand){
+        demand.set('status', card.newStatus);
         demand.save().then(saveSucess);
       });
     }
