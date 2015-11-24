@@ -1,5 +1,7 @@
-<h4>{{board}}</h4>
+{{#draggable-dropzone dropped="changeCard"}}
+<center><h4>{{board}}</h4></center>
 <div class="divider"></div>
-{{#each cards as |card|}}
+  {{#each cards as |card|}}
   {{card-kanban card=card action="sendToRouteAction"}}
 {{/each}}
+{{/draggable-dropzone}}

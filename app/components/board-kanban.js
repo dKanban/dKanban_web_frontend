@@ -10,6 +10,9 @@ export default Ember.Component.extend({
   actions: {
     sendToRouteAction:function(params){
       this.sendAction('action', params);
-    }
+    },
+    changeCard(data) {
+      this.sendAction('changeCard', data);
   }
+}
 });

@@ -7,7 +7,6 @@ export default Ember.Route.extend(AuthenticatedRouteMixin,{
   },
   actions: {
     changeStatus: function(){
-      
     }
   }
 });
