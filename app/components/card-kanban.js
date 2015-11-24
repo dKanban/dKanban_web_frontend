@@ -30,6 +30,21 @@ export default Ember.Component.extend({
     }
   }.property(),
 
+  background: function(){
+    var currentPriority = this.get('card.priority')
+    if(currentPriority === "0"){
+      return " red accent-3";
+    }else if(currentPriority === "1"){
+      return " red lighten-3";
+    }
+    else if(currentPriority === "2"){
+      return "lime darken-3";
+    }
+    else if(currentPriority === "3"){
+      return "teal darken-2";
+    }
+  }.property(),
+
 //TODO FIND ACTION INTO A CONTROLLEr
   // developer: function(){
   //   var store = this.get('parentView.targetObject.store')

@@ -1,8 +1,8 @@
 <div>
   {{#draggable-item content=card}}
-  <div class="card blue-grey darken-1">
+  <div class="card {{background}}">
     <div class="card-content white-text">
-            <p align ="right" class="{{priority}}">{{priority}} </p>
+            <p align ="right" class="priority--title">{{priority}} </p>
       <span class="card-title">{{card.title}}</span>
       <p>{{card.description}}</p>
       <p>{{developer.full_name}}</p>

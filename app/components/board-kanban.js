@@ -7,6 +7,8 @@ export default Ember.Component.extend({
     this.sendAction('refresh');
   },
 
+  
+
   actions: {
     sendToRouteAction:function(params){
       this.sendAction('action', params);
